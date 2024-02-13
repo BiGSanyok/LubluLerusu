@@ -1,27 +1,25 @@
-let cats = [];
-let cat_num = 20;
+let photos = [];
+let photo_num = 10;
 
 function showLove() {
     const heart = document.querySelector(".hearts");
-    for (let i = 0; i < cat_num; i++) {
-        cats[i] = document.createElement("img");
-        cats[i].src = "images/catball.png";
-        cats[i].style.left = Math.random() * 1500 + "px";
-        cats[i].style.right = Math.random() * 1500 + "px";
-        cats[i].style.top = Math.random() * 1500 + "px";
-        cats[i].style.bottom = Math.random() * 1500 + "px";
-        cats[i].classList.add("heart")
-        cats[i].classList.add("hearts-animation");
-        heart.append(cats[i]);
+    for (let i = 0; i < photo_num; i++) {
+        photos[i] = document.createElement("img");
+        photos[i].src = "images/photo1.png";
+        photos[i].style.left = Math.random() * 1500 + "px";
+        photos[i].style.top = Math.random() * 1500 + "px";
+        photos[i].classList.add("heart")
+        photos[i].classList.add("hearts-animation");
+        heart.append(photos[i]);
     }
-    for (let i = 0; i < cat_num; i++) {
-        cats[i].addEventListener("animationend", AnimationHandler, false);
+    for (let i = 0; i < photo_num; i++) {
+        photos[i].addEventListener("animationend", AnimationHandler, false);
     }
 }
 
 function AnimationHandler () {
-    for (let i = 0; i < cat_num; i++) {
-        cats[i].remove();
+    for (let i = 0; i < photo_num; i++) {
+        photos[i].remove();
     }
 }
 
