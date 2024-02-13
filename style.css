@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+    width: 100%;
     background: url(images/background.jpg);
     overflow: hidden;
 }
@@ -65,7 +66,7 @@ body {
         opacity: 1;
     }
     100% {
-        top: -150%;
+        top: -50%;
         opacity: 1;
     }
 }
